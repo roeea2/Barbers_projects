@@ -41,6 +41,7 @@ img{display:block;max-width:100%;object-fit:cover}
 nav{position:fixed;inset:0 0 auto;z-index:100;padding:0 48px;height:70px;display:flex;align-items:center;justify-content:space-between;
   background:rgba(10,11,15,.7);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
   border-bottom:1px solid var(--border);transition:background .3s}
+nav.scrolled{background:rgba(10,11,15,.95)}
 .nav-logo{display:flex;align-items:center;gap:12px}
 .nav-logo img{height:32px;width:auto;border-radius:6px;object-fit:contain;filter:brightness(1.1)}
 .nav-name{font-family:"Frank Ruhl Libre",serif;font-weight:900;font-size:20px;letter-spacing:-.02em}
@@ -70,7 +71,7 @@ nav ul a:hover{color:var(--text)}
 .hero-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse 2s ease infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
 .hero h1{font-family:"Frank Ruhl Libre",serif;font-weight:900;
-  font-size:clamp(64px,10vw,148px);line-height:.9;letter-spacing:-.03em;margin-bottom:28px}
+  font-size:clamp(64px,10vw,148px);line-height:.9;letter-spacing:-.03em;margin-bottom:28px;padding-inline-start:8px}
 .rl{overflow:hidden;display:block}
 .rli{display:block;transform:translateY(105%);animation:lineUp .9s var(--ease) forwards}
 .rl:nth-child(1) .rli{animation-delay:.25s}
@@ -193,7 +194,7 @@ nav ul a:hover{color:var(--text)}
 .r-av{width:36px;height:36px;border-radius:50%;background:var(--bg3);border:1px solid var(--border);
   display:flex;align-items:center;justify-content:center;font-family:"Frank Ruhl Libre",serif;font-weight:700;font-size:14px;color:var(--gold)}
 .r-name{font-size:13px;font-weight:700}
-.r-date{font-family:"JetBrains Mono",monospace;font-size:10px;color:var(--muted);letter-spacing:.06em;margin-top:2px}
+.r-date{font-family:"JetBrains Mono",monospace;font-size:11px;color:rgba(240,236,227,.5);letter-spacing:.06em;margin-top:2px}
 
 /* ── BOOKING CTA ── */
 .booking{background:linear-gradient(135deg,var(--bg2) 0%,rgba(146,162,206,.08) 100%);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
@@ -204,7 +205,7 @@ nav ul a:hover{color:var(--text)}
 .booking-lede{color:var(--dim);font-size:16px;line-height:1.7;max-width:44ch;margin-bottom:36px}
 .booking-contact{display:flex;gap:32px;flex-wrap:wrap;margin-top:32px}
 .bc-item{display:flex;flex-direction:column;gap:4px}
-.bc-label{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.bc-label{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(240,236,227,.5)}
 .bc-value{font-size:14px;font-weight:600}
 .bc-value a{color:var(--text);transition:color .2s}
 .bc-value a:hover{color:var(--gold)}
@@ -217,7 +218,7 @@ nav ul a:hover{color:var(--text)}
 .bc-step{display:flex;gap:18px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--border)}
 .bc-step:last-of-type{border-bottom:none}
 .bc-step-n{font-family:"Frank Ruhl Libre",serif;font-style:italic;font-size:20px;color:var(--gold);line-height:1;flex-shrink:0;padding-top:2px}
-.bc-step-lbl{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:4px}
+.bc-step-lbl{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(240,236,227,.5);display:block;margin-bottom:4px}
 .bc-step-val{font-family:"Frank Ruhl Libre",serif;font-size:18px}
 .book-main-btn{margin-top:24px;width:100%;display:flex;justify-content:center;padding:16px;border-radius:10px;
   background:var(--gold);color:#000;font-family:"Heebo",sans-serif;font-weight:700;font-size:15px;
@@ -233,7 +234,7 @@ footer{background:var(--bg);padding:80px 0 32px;border-top:1px solid var(--borde
 .fw-gi{font-style:italic;color:var(--gold);font-weight:300}
 .foot-tag{margin-top:10px;color:var(--dim);font-size:13px;line-height:1.65;max-width:30ch}
 .foot-btns{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
-footer h5{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+footer h5{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(240,236,227,.5);margin-bottom:18px}
 footer ul{list-style:none;display:flex;flex-direction:column;gap:10px}
 footer ul a{font-size:14px;color:var(--dim);transition:color .2s}
 footer ul a:hover{color:var(--gold)}
@@ -376,7 +377,7 @@ footer ul a:hover{color:var(--gold)}
 <!-- SERVICES -->
 <section class="section" id="services">
   <div class="container">
-    <div class="sr"><span class="section-label">01 — שירותים</span>
+    <div class="sr"><span class="section-label">01 · שירותים</span>
       <h2 class="section-h2">הכל מה שצריך,<br/><span class="ital">ועוד קצת.</span></h2>
     </div>
     <div class="bento">
@@ -423,7 +424,7 @@ footer ul a:hover{color:var(--gold)}
         <div class="bento-arr">&#x2190;</div>
       </div>
       <div class="bento-card featured sr sr-delay-2">
-        <span class="bento-num" style="color:var(--gold)">08 — FEATURED</span>
+        <span class="bento-num" style="color:var(--gold)">08 · FEATURED</span>
         <div class="bento-name">תספורת <span class="si">כלות</span></div>
         <p class="bento-desc">ייעוץ, תספורת ניסיון ועיצוב כלה מרהיב ביום עצמו. הכנה מיוחדת ליום הגדול — מהתחלה ועד הסוף.</p>
         <div class="bento-arr">&#x2190;</div>
@@ -441,7 +442,7 @@ footer ul a:hover{color:var(--gold)}
         <div class="about-img-overlay"></div>
       </div>
       <div class="about-body">
-        <span class="section-label">02 — הסיפור</span>
+        <span class="section-label">02 · הסיפור</span>
         <h2>לא <span class="gi">מספרה</span>.<br/>זו <span class="ga">אמנות</span> שיער.</h2>
         <p class="about-p">פתחנו את על הסכין מתוך אמונה שכל אחד מגיע לשיער שמרגיש כמו שלו. לא תספורת גנרית, לא שירות מהיר — חוויה שמתחילה בייעוץ ומסתיימת כשיוצאים בטוחים במראה.</p>
         <p class="about-p">מתמחים בשיער דליל וקרקפת — הטיפול שרוב הספרים לא מבינים בו. מוצרי טיפוח מובחרים, ידיים מנוסות, תשומת לב לכל פרט.</p>
@@ -463,7 +464,7 @@ footer ul a:hover{color:var(--gold)}
 <section class="section" id="gallery" style="padding-top:0">
   <div class="container">
     <div class="sr" style="margin-bottom:40px">
-      <span class="section-label">03 — גלריה</span>
+      <span class="section-label">03 · גלריה</span>
       <h2 class="section-h2">תוצאות <span class="ital">אמיתיות.</span></h2>
     </div>
   </div>
@@ -483,7 +484,7 @@ footer ul a:hover{color:var(--gold)}
 <section class="section" style="padding-top:0">
   <div class="container">
     <div class="sr" style="margin-bottom:48px">
-      <span class="section-label">04 — לקוחות אומרים</span>
+      <span class="section-label">04 · לקוחות אומרים</span>
       <h2 class="section-h2">לא אנחנו<br/><span class="ital">אומרים.</span></h2>
     </div>
     <div class="reviews sr">
@@ -511,25 +512,25 @@ footer ul a:hover{color:var(--gold)}
   <div class="container">
     <div class="booking-inner sr">
       <div>
-        <span class="section-label">05 — הזמנת תור</span>
+        <span class="section-label">05 · הזמנת תור</span>
         <h2>שתי דקות.<br/><span class="gi">תור משלך.</span></h2>
         <p class="booking-lede">בחרו שירות, הגיעו עם חיוך — הכל מחכה לכם. הזמנה פשוטה, אישור מיידי בוואטסאפ.</p>
         <a href="https://diana.co.il/%d7%a6%d7%a8%d7%95-%d7%a7%d7%a9%d7%a8/" target="_blank" rel="noopener" class="btn-gold" style="display:inline-flex">להזמנה אונליין <span class="btn-arrow">&#x2192;</span></a>
         <div class="booking-contact">
-          <div class="bc-item"><span class="bc-label">— טלפון</span><span class="bc-value"><a href="tel:0542345222">0542345222</a></span></div>
-          <div class="bc-item"><span class="bc-label">— כתובת</span><span class="bc-value">דרך מנחם בגין, רחובות</span>
+          <div class="bc-item"><span class="bc-label">טלפון</span><span class="bc-value"><a href="tel:0542345222">0542345222</a></span></div>
+          <div class="bc-item"><span class="bc-label">כתובת</span><span class="bc-value">דרך מנחם בגין, רחובות</span>
             <div class="map-row">
               <a href="https://www.google.com/maps/search/?api=1&query=%D7%93%D7%A8%D7%9A%20%D7%9E%D7%A0%D7%97%D7%9D%20%D7%91%D7%92%D7%99%D7%9F%2C%20%D7%A8%D7%97%D7%95%D7%91%D7%95%D7%AA" target="_blank" rel="noopener" class="map-pill">&#x1F5FA; Google Maps</a>
               <a href="https://waze.com/ul?q=%D7%93%D7%A8%D7%9A%20%D7%9E%D7%A0%D7%97%D7%9D%20%D7%91%D7%92%D7%99%D7%9F%2C%20%D7%A8%D7%97%D7%95%D7%91%D7%95%D7%AA" target="_blank" rel="noopener" class="map-pill">&#x1F697; Waze</a>
             </div>
           </div>
-          <div class="bc-item"><span class="bc-label">— שעות</span><span class="bc-value hours-val">24/7 ✦</span></div>
+          <div class="bc-item"><span class="bc-label">שעות פתיחה</span><span class="bc-value hours-val">24/7 ✦</span></div>
         </div>
       </div>
       <div class="booking-card">
-        <div class="bc-step"><div class="bc-step-n">i</div><div><span class="bc-step-lbl">— השירות</span><span class="bc-step-val">בחרו שירות</span></div></div>
-        <div class="bc-step"><div class="bc-step-n">ii</div><div><span class="bc-step-lbl">— התאריך</span><span class="bc-step-val">בחרו יום ושעה</span></div></div>
-        <div class="bc-step"><div class="bc-step-n">iii</div><div><span class="bc-step-lbl">— אישור</span><span class="bc-step-val">אישור מיידי בוואטסאפ</span></div></div>
+        <div class="bc-step"><div class="bc-step-n">i</div><div><span class="bc-step-lbl">השירות</span><span class="bc-step-val">בחרו שירות</span></div></div>
+        <div class="bc-step"><div class="bc-step-n">ii</div><div><span class="bc-step-lbl">התאריך</span><span class="bc-step-val">בחרו יום ושעה</span></div></div>
+        <div class="bc-step"><div class="bc-step-n">iii</div><div><span class="bc-step-lbl">אישור</span><span class="bc-step-val">אישור מיידי בוואטסאפ</span></div></div>
         <a href="https://diana.co.il/%d7%a6%d7%a8%d7%95-%d7%a7%d7%a9%d7%a8/" target="_blank" rel="noopener" class="book-main-btn">להזמנת תור &#x2190;</a>
       </div>
     </div>
@@ -552,29 +553,33 @@ footer ul a:hover{color:var(--gold)}
         </div>
       </div>
       <div>
-        <h5>— כתובת</h5>
+        <h5>כתובת</h5>
         <div class="foot-info">דרך מנחם בגין<br/>רחובות</div>
-        <h5 style="margin-top:24px">— טלפון</h5>
+        <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap">
+          <a href="https://www.google.com/maps/search/?api=1&query=%D7%93%D7%A8%D7%9A%20%D7%9E%D7%A0%D7%97%D7%9D%20%D7%91%D7%92%D7%99%D7%9F%2C%20%D7%A8%D7%97%D7%95%D7%91%D7%95%D7%AA" target="_blank" rel="noopener" class="map-pill">&#x1F5FA; Maps</a>
+          <a href="https://waze.com/ul?q=%D7%93%D7%A8%D7%9A%20%D7%9E%D7%A0%D7%97%D7%9D%20%D7%91%D7%92%D7%99%D7%9F%2C%20%D7%A8%D7%97%D7%95%D7%91%D7%95%D7%AA" target="_blank" rel="noopener" class="map-pill">&#x1F697; Waze</a>
+        </div>
+        <h5 style="margin-top:24px">טלפון</h5>
         <div class="foot-info"><span class="mono-val">0542345222</span></div>
       </div>
       <div>
-        <h5>— שעות פתיחה</h5>
+        <h5>שעות פתיחה</h5>
         <div class="hours-list">
           <span class="hd">ראשון–חמישי</span><span class="ht">פתוח</span>
           <span class="hd">שישי</span><span class="ht">פתוח</span>
           <span class="hd">שבת</span><span class="ht">פתוח</span>
         </div>
-        <div class="always-open">24/7 — תמיד פתוחים ✦</div>
+        <div class="always-open">24/7 · תמיד פתוחים ✦</div>
       </div>
       <div>
-        <h5>— עקבו</h5>
+        <h5>עקבו אחרינו</h5>
         <ul>
           <li><a href="https://diana.co.il/%d7%9e%d7%9e%d7%9c%d7%99%d7%a6%d7%99%d7%9d/" target="_blank">Instagram</a></li>
           <li><a href="https://diana.co.il/%d7%9e%d7%9e%d7%9c%d7%99%d7%a6%d7%99%d7%9d/" target="_blank">Facebook</a></li>
           <li><a href="https://diana.co.il/%d7%9e%d7%9e%d7%9c%d7%99%d7%a6%d7%99%d7%9d/" target="_blank">TikTok</a></li>
         </ul>
         <div style="margin-top:28px;padding-top:18px;border-top:1px solid var(--border)">
-          <h5>— בנייה</h5>
+          <h5>בנייה</h5>
           <a href="https://barber-sites.vercel.app" target="_blank" rel="noopener" style="font-family:JetBrains Mono,monospace;font-size:11px;letter-spacing:.1em;color:var(--muted);transition:color .2s">קאטסייט &#x2197;</a>
         </div>
       </div>
@@ -631,7 +636,7 @@ if(tt){
 // Nav background on scroll
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>{
-  nav.style.background=window.scrollY>60?'rgba(10,11,15,.95)':'rgba(10,11,15,.7)';
+  nav.classList.toggle('scrolled',window.scrollY>60);
 },{ passive:true });
 </script>
 </body>

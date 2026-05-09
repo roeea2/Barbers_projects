@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>על הסכין — מספרה</title>
-<meta name="description" content="מספרה בוטיק ברחובות. דיאנה מתמחה בשיער דליל, תספורות, צביעה ועיצוב לכלות."/>
+<meta name="description" content="שירותים: תספורת גברים, גילוח מסורתי, תספורת ילדים, עיצוב שיער, צביעת שיער, טיפולי קרקפת, תספורת נשים, תספורת כלות. מספרה בוטיק, דיאנה תדאג לכל מה שאת צריכה ותצאי מאושרת ומחוייכת, אנו מתמחים בשיער דליל"/>
 <meta property="og:url" content="https://barber-61e769d6.vercel.app"/>
 <meta property="og:title" content="על הסכין — מספרה"/>
 <meta property="og:image" content="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/images/1778301370600-44a55415-94e0-41f0-b127-722c1321a391.jpg"/>
@@ -70,7 +70,7 @@ nav ul a:hover{color:var(--text)}
 @keyframes kbZoom{from{transform:scale(1)}to{transform:scale(1.07)}}
 .hero-bg::after{content:'';position:absolute;inset:0;
   background:linear-gradient(to top,var(--hero-dark) 0%,var(--hero-mid) 45%,var(--hero-light) 100%)}
-.hero-content{position:relative;z-index:2;width:100%;padding:0 48px 72px;overflow:hidden}
+.hero-content{position:relative;z-index:2;width:100%;padding:0 48px 72px}
 .hero-inner{max-width:1400px;margin:0 auto}
 .hero-badge-wrap{opacity:0;animation:fadeUp .8s var(--ease) .1s forwards}
 .hero-tag{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:100px;
@@ -79,13 +79,13 @@ nav ul a:hover{color:var(--text)}
 .hero-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse 2s ease infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
 .hero h1{font-family:"Frank Ruhl Libre",serif;font-weight:900;
-  font-size:clamp(64px,10vw,148px);line-height:.9;letter-spacing:-.03em;margin-bottom:28px}
-.rl{overflow-x:visible;overflow-y:hidden;display:block}
-.rli{display:block;transform:translateY(105%);animation:lineUp .9s var(--ease) forwards}
+  font-size:clamp(64px,10vw,148px);line-height:.9;letter-spacing:-.03em;margin-bottom:28px;padding-top:.15em}
+.rl{display:block}
+.rli{display:block;transform:translateY(22px);opacity:0;animation:lineUp .85s var(--ease) forwards}
 .rl:nth-child(1) .rli{animation-delay:.25s}
 .rl:nth-child(2) .rli{animation-delay:.42s}
 .rl:nth-child(3) .rli{animation-delay:.59s}
-@keyframes lineUp{to{transform:translateY(0)}}
+@keyframes lineUp{to{transform:translateY(0);opacity:1}}
 .h1-gold{color:var(--gold)}
 .h1-blue{color:var(--blue)}
 .h1-outline{-webkit-text-stroke:2px var(--text);color:transparent;font-style:italic;font-weight:300}
@@ -282,7 +282,7 @@ footer ul a:hover{color:var(--gold)}
   .gallery-scroll{padding-inline:24px}
 }
 @media(max-width:640px){
-  .hero h1{font-size:clamp(48px,13vw,76px);overflow:hidden}
+  .hero h1{font-size:clamp(48px,13vw,76px)}
   .bento{grid-template-columns:1fr}
   .bento-card.wide,.bento-card.featured{grid-column:span 1}
   .foot-grid{grid-template-columns:1fr}
@@ -309,7 +309,7 @@ footer ul a:hover{color:var(--gold)}
 <!-- NAV -->
 <nav id="nav">
   <div class="nav-logo">
-    <img src="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/images/1778301373542-diana_logo-new-02-1.png" alt="על הסכין"/><span class="nav-name">על הסכין</span>
+    <img src="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/logos/1778301370599-diana_logo-new-02-1.png" alt="על הסכין" style="height:36px;"/><span class="nav-name">על הסכין</span>
   </div>
   <ul>
     <li><a href="#services">שירותים</a></li>
@@ -334,10 +334,10 @@ footer ul a:hover{color:var(--gold)}
         </div>
         <h1>
           <span class="rl"><span class="rli">שיער</span></span>
-          <span class="rl"><span class="rli h1-gold">שמרגיש</span></span>
-          <span class="rl"><span class="rli h1-outline">כמו שלך.</span></span>
+<span class="rl"><span class="rli h1-gold">שמרגיש</span></span>
+<span class="rl"><span class="rli h1-outline">כמו שלך.</span></span>
         </h1>
-        <p class="hero-sub">מספרה בוטיק ברחובות. דיאנה מתמחה בשיער דליל — תספורות, צביעה, עיצוב לכלות ועוד.</p>
+        <p class="hero-sub">מספרה בוטיק ברחובות עם דיאנה · מתמחים בשיער דליל, תספורות נשים, גברים וילדים</p>
         <div class="hero-btns">
           <a href="https://diana.co.il/%d7%a6%d7%a8%d7%95-%d7%a7%d7%a9%d7%a8/" target="_blank" rel="noopener" class="btn-gold">קבע תור עכשיו <span class="btn-arrow">&#x2192;</span></a>
           <a href="#services" class="btn-ghost">השירותים שלנו</a>
@@ -364,22 +364,40 @@ footer ul a:hover{color:var(--gold)}
     <div class="bento">
       <div class="bento-card featured sr">
   <span class="bento-num" style="color:var(--gold)">01</span>
-  <div class="bento-name">טיפולי קרקפת <span class="si">ושיקום שיער דליל</span></div>
-  <p class="bento-desc">ההתמחות של דיאנה. פתרונות שעובדים לאורך זמן, מותאמים אישית לכל לקוחה. שיער דליל? זה בדיוק מה שאנחנו עושות.</p>
+  <div class="bento-name">טיפולי <span class="si">קרקפת</span></div>
+  <p class="bento-desc">מתמחים בשיקום שיער דליל, טיפולי קרקפת ועיצוב מותאם אישית לכל סוג שיער</p>
   <div class="bento-arr">&#x2190;</div>
 </div>
 <div class="bento-card wide sr sr-delay-1">
   <span class="bento-num">02</span>
   <div class="bento-name">תספורת <span class="si">כלות</span></div>
-  <p class="bento-desc">עיצוב שיער לחתונה שמחזיק כל היום. עם דיאנה, כל כלה יוצאת בדיוק כמו שדמיינה.</p>
+  <p class="bento-desc">עיצוב שיער לכלה ביום המיוחד שלך, כולל ייעוץ אישי ותאום מוקדם</p>
   <div class="bento-arr">&#x2190;</div>
 </div>
-<div class="bento-card sr sr-delay-2"><span class="bento-num">03</span><div class="bento-name">תספורת <span class="si">נשים</span></div><p class="bento-desc">מחתך קלאסי ועד עיצוב בוטיק מודרני.</p><div class="bento-arr">&#x2190;</div></div>
-<div class="bento-card sr sr-delay-2"><span class="bento-num">04</span><div class="bento-name">צביעת <span class="si">שיער</span></div><p class="bento-desc">גוונים, בליאז' ומיקסים — בדיוק הצבע שתמיד רציתם.</p><div class="bento-arr">&#x2190;</div></div>
-<div class="bento-card sr sr-delay-3"><span class="bento-num">05</span><div class="bento-name">עיצוב <span class="si">שיער</span></div><p class="bento-desc">פן, תסרוקת, קרלים — כל עיצוב שצריך לאירוע.</p><div class="bento-arr">&#x2190;</div></div>
-<div class="bento-card sr sr-delay-3"><span class="bento-num">06</span><div class="bento-name">תספורת <span class="si">גברים</span></div><p class="bento-desc">תספורת נקייה ומדויקת לכל סגנון.</p><div class="bento-arr">&#x2190;</div></div>
-<div class="bento-card sr sr-delay-3"><span class="bento-num">07</span><div class="bento-name">גילוח <span class="si">מסורתי</span></div><p class="bento-desc">גילוח קלאסי עם להב — חוויה שלא תשכחו.</p><div class="bento-arr">&#x2190;</div></div>
-<div class="bento-card sr sr-delay-3"><span class="bento-num">08</span><div class="bento-name">תספורת <span class="si">ילדים</span></div><p class="bento-desc">בסבלנות ובחיוך — גם הקטנים ייצאו מאושרים.</p><div class="bento-arr">&#x2190;</div></div>
+<div class="bento-card sr sr-delay-2">
+  <span class="bento-num">03</span>
+  <div class="bento-name">צביעת <span class="si">שיער</span></div>
+  <p class="bento-desc">שיטות צביעה עדכניות ופרימיום</p>
+  <div class="bento-arr">&#x2190;</div>
+</div>
+<div class="bento-card sr sr-delay-2">
+  <span class="bento-num">04</span>
+  <div class="bento-name">עיצוב <span class="si">שיער</span></div>
+  <p class="bento-desc">פן, תסרוקות ועיצוב לכל אירוע</p>
+  <div class="bento-arr">&#x2190;</div>
+</div>
+<div class="bento-card sr sr-delay-2">
+  <span class="bento-num">05</span>
+  <div class="bento-name">גילוח <span class="si">מסורתי</span></div>
+  <p class="bento-desc">גילוח ישיר עם בד חם ותיתרת</p>
+  <div class="bento-arr">&#x2190;</div>
+</div>
+<div class="bento-card sr sr-delay-2">
+  <span class="bento-num">06</span>
+  <div class="bento-name">תספורת <span class="si">ילדים</span></div>
+  <p class="bento-desc">חוויה נעימה לילדים בכל גיל</p>
+  <div class="bento-arr">&#x2190;</div>
+</div>
     </div>
   </div>
 </section>
@@ -394,16 +412,16 @@ footer ul a:hover{color:var(--gold)}
       </div>
       <div class="about-body">
         <span class="section-label">02 · הסיפור</span>
-        <h2 class="section-h2"><span class="ga">דיאנה.</span><br/><span class="gi">מאחורי כל שיער.</span></h2>
-        <p class="about-p">דיאנה בהדורי מפעילה את "על הסכין" ברחובות עם גישה פשוטה: כל לקוחה מגיעה עם שיער שלה ויוצאת עם גרסה הכי טובה שלו. ההתמחות שלה בשיער דליל הפכה אותה לכתובת של נשים שמחפשות תשובות אמיתיות, לא סתם תספורת.</p>
-<p class="about-p">מתספורות יומיומיות ועד עיצוב שיער לכלות — הכל נעשה ביד אחת ובתשומת לב מלאה. כי כשדיאנה עובדת, היא לא שוכחת פרט.</p>
+        <h2 class="section-h2"><span class="ga">דיאנה.</span><br/><span class="gi">מומחית שיער דליל</span></h2>
+        <p class="about-p">דיאנה מנהלת את מספרת על הסכין ברחובות עם התמחות ייחודית בשיער דליל ועדין. כל לקוחה מקבלת ייעוץ אישי מותאם לסוג שיערה ולצרכיה.</p>
+<p class="about-p">השירות כולל את מלוא הטווח: תספורות גברים, נשים וילדים, צביעה, עיצוב, גילוח מסורתי וטיפולי קרקפת מקצועיים.</p>
         <div class="about-quote">
-          <p>דיאנה מבינה בדיוק מה שאני רוצה, אפילו לפני שאני מסבירה. יצאתי עם שיער שהרגיש שלי.</p>
+          <p>דיאנה הבינה בדיוק מה אני צריכה, התוצאה עברה את כל הציפיות שלי</p>
           <small>לקוח קבוע</small>
         </div>
         <div class="about-stats">
           <div><div class="as-num">12<span class="si">+</span></div><div class="as-lbl">שנות ניסיון</div></div>
-<div><div class="as-num">3K<span class="si">+</span></div><div class="as-lbl">לקוחות מרוצות</div></div>
+<div><div class="as-num">500<span class="si">+</span></div><div class="as-lbl">לקוחות מרוצות</div></div>
 <div><div class="as-num">5<span class="si">★</span></div><div class="as-lbl">גוגל</div></div>
         </div>
       </div>
@@ -420,7 +438,14 @@ footer ul a:hover{color:var(--gold)}
     </div>
   </div>
   <div class="gallery-scroll" id="galleryScroll">
-    <div class="g-card"><img src="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/images/1778301371801-best-hair-salon-near-dl-lowry-west-86th-street-and-deweese-hair-design-in-indianapolis-g-michael-salon.jpg" alt="האולפן" loading="lazy"/><div class="g-overlay"><span class="g-caption">האולפן</span></div></div><div class="g-card"><img src="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/images/1778301373131-c100845b-e6bf-4f9f-b5ad-1a5999340339.jpg" alt="עיצוב שיער" loading="lazy"/><div class="g-overlay"><span class="g-caption">עיצוב שיער</span></div></div><div class="g-card"><img src="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/images/1778301373756-diana-96-236x221.jpg" alt="תספורת ייחודית" loading="lazy"/><div class="g-overlay"><span class="g-caption">תספורת ייחודית</span></div></div><div class="g-card"><img src="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/images/1778301373921-diana-101-236x221.jpg" alt="עיצוב מקצועי" loading="lazy"/><div class="g-overlay"><span class="g-caption">עיצוב מקצועי</span></div></div><div class="g-card"><img src="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/images/1778301374139-diana-102-236x221.jpg" alt="סגנון ייחודי" loading="lazy"/><div class="g-overlay"><span class="g-caption">סגנון ייחודי</span></div></div><div class="g-card"><img src="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/images/1778301374325-diana-103-236x221.jpg" alt="דיאנה עובדת" loading="lazy"/><div class="g-overlay"><span class="g-caption">דיאנה עובדת</span></div></div><div class="g-card"><img src="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/images/1778301374534-diana-155.jpg" alt="תוצאה אמיתית" loading="lazy"/><div class="g-overlay"><span class="g-caption">תוצאה אמיתית</span></div></div>
+    <div class="g-card"><img src="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/images/1778301370600-44a55415-94e0-41f0-b127-722c1321a391.jpg" alt="עיצוב שיער" loading="lazy"/><div class="g-overlay"><span class="g-caption">עיצוב שיער</span></div></div>
+<div class="g-card"><img src="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/images/1778301371253-173d5b42-67a7-4b92-ac82-4d25b2660812.jpg" alt="תספורת ייחודית" loading="lazy"/><div class="g-overlay"><span class="g-caption">תספורת ייחודית</span></div></div>
+<div class="g-card"><img src="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/images/1778301371801-best-hair-salon-near-dl-lowry-west-86th-street-and-deweese-hair-design-in-indianapolis-g-michael-salon.jpg" alt="האולפן" loading="lazy"/><div class="g-overlay"><span class="g-caption">האולפן</span></div></div>
+<div class="g-card"><img src="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/images/1778301373131-c100845b-e6bf-4f9f-b5ad-1a5999340339.jpg" alt="עיצוב מקצועי" loading="lazy"/><div class="g-overlay"><span class="g-caption">עיצוב מקצועי</span></div></div>
+<div class="g-card"><img src="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/images/1778301373921-diana-101-236x221.jpg" alt="סגנון ייחודי" loading="lazy"/><div class="g-overlay"><span class="g-caption">סגנון ייחודי</span></div></div>
+<div class="g-card"><img src="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/images/1778301374139-diana-102-236x221.jpg" alt="תספורת" loading="lazy"/><div class="g-overlay"><span class="g-caption">תספורת</span></div></div>
+<div class="g-card"><img src="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/images/1778301374325-diana-103-236x221.jpg" alt="עיצוב שיער" loading="lazy"/><div class="g-overlay"><span class="g-caption">עיצוב שיער</span></div></div>
+<div class="g-card"><img src="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/images/1778301374534-diana-155.jpg" alt="תספורת כלות" loading="lazy"/><div class="g-overlay"><span class="g-caption">תספורת כלות</span></div></div>
   </div>
 </section>
 
@@ -432,20 +457,20 @@ footer ul a:hover{color:var(--gold)}
       <h2 class="section-h2">לא אנחנו<br/><span class="ital">אומרים.</span></h2>
     </div>
     <div class="reviews sr">
-      <div class="r-card sr">
+      <div class="r-card">
   <div class="r-stars">★★★★★</div>
-  <div class="r-quote">דיאנה פשוט מדהימה. אחרי שנים של סבל עם שיער דליל, היא הסבירה לי בדיוק מה הבעיה ונתנה לי פתרון שעובד. אף אחד לא עשה את זה לפניה.</div>
-  <div class="r-who"><div class="r-av">מ</div><div><div class="r-name">מיכל כהן</div><div class="r-date">לפני שבועיים · GOOGLE</div></div></div>
+  <div class="r-quote">דיאנה מקסימה, מקצועית ועם עין אמנותית. הגעתי עם שיער דליל ויצאתי עם תספורת שמחמיאה לי מאוד. ממליצה בחום.</div>
+  <div class="r-who"><div class="r-av">מ</div><div><div class="r-name">מיכל כהן</div><div class="r-date">לפני 3 שבועות · GOOGLE</div></div></div>
 </div>
-<div class="r-card sr sr-delay-1">
+<div class="r-card">
   <div class="r-stars">★★★★★</div>
-  <div class="r-quote">הכינה לי את השיער לחתונה ויצאתי בדיוק כמו שרציתי. היתה סבלנית, מקשיבה, ולא הלחיצה אותי. ממליצה לכל כלה.</div>
-  <div class="r-who"><div class="r-av">ת</div><div><div class="r-name">תמר ברק</div><div class="r-date">לפני חודש · GOOGLE</div></div></div>
+  <div class="r-quote">הכי טוב שקרה לשיער שלי. דיאנה ידעה בדיוק מה לעשות עם שיעי הדליל שלי, התוצאה מדהימה. חוזרת כל חודש.</div>
+  <div class="r-who"><div class="r-av">נ</div><div><div class="r-name">נועה לוי</div><div class="r-date">לפני חודש · GOOGLE</div></div></div>
 </div>
-<div class="r-card sr sr-delay-2">
+<div class="r-card">
   <div class="r-stars">★★★★★</div>
-  <div class="r-quote">הגעתי לראשונה לפני שנה ומאז לא הלכתי לשום מקום אחר. תמיד יוצאת מרוצה, תמיד מרגישה שדיאנה מכירה את השיער שלי.</div>
-  <div class="r-who"><div class="r-av">נ</div><div><div class="r-name">נועה לוי</div><div class="r-date">לפני 3 שבועות · GOOGLE</div></div></div>
+  <div class="r-quote">מספרה בוטיק ברמה אחרת. האווירה נעימה, דיאנה מקצועית ומסורה. עיצוב שיער לחתונה שלי יצא מושלם.</div>
+  <div class="r-who"><div class="r-av">ש</div><div><div class="r-name">שירה אברהם</div><div class="r-date">לפני 2 שבועות · GOOGLE</div></div></div>
 </div>
     </div>
   </div>
@@ -462,7 +487,14 @@ footer ul a:hover{color:var(--gold)}
         <a href="https://diana.co.il/%d7%a6%d7%a8%d7%95-%d7%a7%d7%a9%d7%a8/" target="_blank" rel="noopener" class="btn-gold" style="display:inline-flex">להזמנה אונליין <span class="btn-arrow">&#x2192;</span></a>
         <div class="booking-contact">
           <div class="bc-item"><span class="bc-label">טלפון</span><span class="bc-value"><a href="tel:0542345222">0542345222</a></span></div>
-<div class="bc-item"><span class="bc-label">כתובת</span><span class="bc-value">דרך מנחם בגין, רחובות</span><div class="map-row"><a href="https://www.google.com/maps/search/?api=1&query=%D7%93%D7%A8%D7%9A%20%D7%9E%D7%A0%D7%97%D7%9D%20%D7%91%D7%92%D7%99%D7%9F%2C%20%D7%A8%D7%97%D7%95%D7%91%D7%95%D7%AA" target="_blank" rel="noopener" class="map-pill">&#x1F5FA; Google Maps</a><a href="https://waze.com/ul?q=%D7%93%D7%A8%D7%9A%20%D7%9E%D7%A0%D7%97%D7%9D%20%D7%91%D7%92%D7%99%D7%9F%2C%20%D7%A8%D7%97%D7%95%D7%91%D7%95%D7%AA" target="_blank" rel="noopener" class="map-pill">&#x1F697; Waze</a></div></div>
+<div class="bc-item">
+  <span class="bc-label">כתובת</span>
+  <span class="bc-value">דרך מנחם בגין, רחובות</span>
+  <div class="map-row">
+    <a href="https://www.google.com/maps/search/?api=1&query=%D7%93%D7%A8%D7%9A%20%D7%9E%D7%A0%D7%97%D7%9D%20%D7%91%D7%92%D7%99%D7%9F%2C%20%D7%A8%D7%97%D7%95%D7%91%D7%95%D7%AA" target="_blank" rel="noopener" class="map-pill">🗺 Google Maps</a>
+    <a href="https://waze.com/ul?q=%D7%93%D7%A8%D7%9A%20%D7%9E%D7%A0%D7%97%D7%9D%20%D7%91%D7%92%D7%99%D7%9F%2C%20%D7%A8%D7%97%D7%95%D7%91%D7%95%D7%AA" target="_blank" rel="noopener" class="map-pill">🚗 Waze</a>
+  </div>
+</div>
 <div class="bc-item"><span class="bc-label">שעות פתיחה</span><span class="bc-value hours-val">24/7 ✦</span></div>
         </div>
       </div>
@@ -481,11 +513,11 @@ footer ul a:hover{color:var(--gold)}
   <div class="container">
     <div class="foot-grid">
       <div>
-        <div class="foot-logo"><img src="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/images/1778301373542-diana_logo-new-02-1.png" alt="על הסכין"/></div>
+        <div class="foot-logo"><img src="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/logos/1778301370599-diana_logo-new-02-1.png" alt="על הסכין" style="height:48px;"/></div>
         <div class="foot-wordmark">על הס<span class="fw-gi">כין</span>.</div>
-        <p class="foot-tag">דיאנה. רחובות. שיער שמרגיש בדיוק כמו שלך.</p>
+        <p class="foot-tag">מספרה בוטיק ברחובות · שיער שנראה ומרגיש כמו שלך</p>
         <div class="foot-btns"><a href="https://diana.co.il/%d7%a6%d7%a8%d7%95-%d7%a7%d7%a9%d7%a8/" target="_blank" rel="noopener" class="btn-gold" style="font-size:13px;padding:10px 20px">קבע תור &#x2190;</a></div>
-        <div class="soc-row"><a href="https://diana.co.il/%d7%9e%d7%9e%d7%9c%d7%99%d7%a6%d7%99%d7%9d/" target="_blank" rel="noopener" class="soc" aria-label="אינסטגרם"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="https://diana.co.il/%d7%9e%d7%9e%d7%9c%d7%99%d7%a6%d7%99%d7%9d/" target="_blank" rel="noopener" class="soc" aria-label="פייסבוק"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></div>
+        <div class="soc-row"><a href="https://diana.co.il/%d7%9e%d7%9e%d7%9c%d7%99%d7%a6%d7%99%d7%9d/" target="_blank" rel="noopener" class="soc" aria-label="פייסבוק"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="https://diana.co.il/%d7%9e%d7%9e%d7%9c%d7%99%d7%a6%d7%99%d7%9d/" target="_blank" rel="noopener" class="soc" aria-label="אינסטגרם"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></div>
       </div>
       <div>
         <h3 class="foot-h">כתובת</h3>

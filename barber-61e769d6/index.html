@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>על הסכין</title>
+  <meta name="description" content="שירותים: תספורת גברים, גילוח מסורתי, תספורת ילדים, עיצוב שיער, צביעת שיער, טיפולי קרקפת, תספורת נשים, תספורת כלות. מספרה בוטיק, דיאנה תדאג לכל מה שאת צריכה ותצאי מאושרת ומחויכת, אנו מתמחים בשיער דליל" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://barber-61e769d6.vercel.app" />
+  <meta property="og:title" content="על הסכין" />
+  <meta property="og:description" content="שירותים: תספורת גברים, גילוח מסורתי, תספורת ילדים, עיצוב שיער, צביעת שיער, טיפולי קרקפת, תספורת נשים, תספורת כלות. מספרה בוטיק, דיאנה תדאג לכל מה שאת צריכה ותצאי מאושרת ומחויכת, אנו מתמחים בשיער דליל" />
+  <meta property="og:image" content="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/images/1778301370600-44a55415-94e0-41f0-b127-722c1321a391.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/images/1778301370600-44a55415-94e0-41f0-b127-722c1321a391.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2392a2ce'/><text y='.9em' font-size='72' x='50%' dominant-baseline='middle' text-anchor='middle'>✂</text></svg>" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg-primary:    #92a2ce;
+      --bg-secondary:  #9aaee0;
+      --text-primary:  #ffffff;
+      --text-secondary:rgba(255,255,255,0.55);
+      --text-muted:    rgba(255,255,255,0.28);
+      --accent:        #7e6716;
+      --accent-warm:   #5e7137;
+      --accent-dim:    rgba(126,103,22,0.12);
+      --accent-glow:   rgba(126,103,22,0.3);
+      --border-subtle: rgba(126,103,22,0.15);
+      --glass-bg:      rgba(126,103,22,0.06);
+      --ease-out:      cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family:'Heebo',sans-serif; background:var(--bg-primary); color:var(--text-primary); min-height:100vh; overflow-x:hidden; direction:rtl; }
+    #network-canvas { position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:1; pointer-events:none; }
+
+    /* FLOATING ICONS */
+    .floating-icons { position:fixed; top:0; left:0; width:100%; height:100%; z-index:2; pointer-events:none; overflow:hidden; }
+    .floating-icon {
+      position:absolute; width:48px; height:48px; border-radius:50%;
+      background:var(--bg-secondary); border:1px solid var(--border-subtle);
+      display:flex; align-items:center; justify-content:center;
+      color:var(--accent); opacity:0; font-size:1.2rem;
+      animation:floatIn 0.8s ease forwards, floatBob 6s ease-in-out infinite;
+      box-shadow:0 0 20px var(--accent-dim);
+    }
+    .floating-icon:nth-child(1){top:12%;left:5%;  animation-delay:0.2s,0.2s;}
+    .floating-icon:nth-child(2){top:20%;right:8%; animation-delay:0.5s,0.5s;}
+    .floating-icon:nth-child(3){top:40%;left:3%;  animation-delay:0.8s,0.8s;}
+    .floating-icon:nth-child(4){top:60%;right:4%; animation-delay:0.4s,0.4s;}
+    .floating-icon:nth-child(5){top:78%;left:6%;  animation-delay:0.9s,0.9s;}
+    .floating-icon:nth-child(6){top:88%;right:7%; animation-delay:0.6s,0.6s;}
+    @keyframes floatIn{from{opacity:0;transform:scale(0.5)}to{opacity:0.4;transform:scale(1)}}
+    @keyframes floatBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+
+    /* ACCENT TEXT — solid color, no gradient */
+    .accent-text { color: var(--accent); }
+
+    /* NAV */
+    .navbar {
+      position:fixed; top:0; left:0; right:0; z-index:50;
+      padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center;
+      background:rgba(0,0,0,0.5); backdrop-filter:blur(20px);
+      border-bottom:1px solid var(--border-subtle);
+    }
+    .nav-logo {
+      font-size:1.4rem; font-weight:800; color:var(--accent);
+      display:flex; align-items:center; gap:0.5rem;
+    }
+    .nav-logo img { height:36px; border-radius:8px; object-fit:contain; }
+    .nav-links { display:flex; gap:2rem; list-style:none; }
+    .nav-links a {
+      color:var(--text-secondary); text-decoration:none; font-size:0.9rem; font-weight:500;
+      transition:color 180ms var(--ease-out);
+    }
+    .nav-links a:hover { color:var(--accent); }
+    .nav-cta {
+      padding:0.6rem 1.5rem; border-radius:8px;
+      background:var(--accent); color:#000; font-weight:700; font-size:0.85rem;
+      text-decoration:none; border:none; cursor:pointer; font-family:inherit;
+      transition:transform 180ms var(--ease-out), box-shadow 180ms var(--ease-out);
+    }
+    .nav-cta:hover { transform:translateY(-2px); box-shadow:0 8px 30px var(--accent-glow); }
+    .nav-cta:active { transform:scale(0.97); }
+    .mobile-menu-btn { display:none; background:none; border:none; color:var(--text-primary); cursor:pointer; font-size:1.5rem; }
+
+    /* HERO */
+    .hero {
+      min-height:100vh; display:flex; align-items:center; justify-content:center;
+      padding:8rem 2rem 4rem; position:relative; z-index:10; text-align:center;
+    }
+    .hero::before {
+      content:''; position:absolute; inset:0;
+      background:radial-gradient(ellipse 80% 60% at 50% 40%, var(--accent-dim) 0%, transparent 70%);
+      pointer-events:none;
+    }
+    .hero-content { max-width:820px; position:relative; }
+    .hero-badge {
+      display:inline-block; color:var(--accent); font-size:0.8rem; font-weight:600;
+      letter-spacing:0.12em; background:var(--accent-dim); padding:0.4rem 1.2rem;
+      border-radius:100px; border:1px solid var(--border-subtle);
+      margin-bottom:1.5rem; animation:fadeIn 0.6s ease forwards;
+    }
+    .hero h1 {
+      font-size:clamp(2.8rem,7vw,5rem); font-weight:900; line-height:1.15; margin-bottom:1.2rem;
+      animation:fadeIn 0.7s ease 0.1s forwards; opacity:0;
+    }
+    .hero-subtitle {
+      color:var(--text-secondary); font-size:1.15rem; line-height:1.7;
+      max-width:600px; margin:0 auto 2.5rem;
+      animation:fadeIn 0.7s ease 0.2s forwards; opacity:0;
+    }
+    .hero-buttons {
+      display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;
+      animation:fadeIn 0.7s ease 0.3s forwards; opacity:0;
+    }
+    .btn-primary {
+      padding:0.9rem 2.2rem; border-radius:10px;
+      background:var(--accent); color:#000; font-weight:700; font-size:0.95rem;
+      text-decoration:none; border:none; cursor:pointer; font-family:inherit;
+      display:inline-flex; align-items:center; gap:0.4rem;
+      transition:transform 180ms var(--ease-out), box-shadow 180ms var(--ease-out);
+    }
+    .btn-primary:hover { transform:translateY(-3px); box-shadow:0 12px 40px var(--accent-glow); }
+    .btn-primary:active { transform:scale(0.97); }
+    .btn-secondary {
+      padding:0.9rem 2.2rem; border-radius:10px;
+      background:transparent; color:var(--accent);
+      font-weight:600; font-size:0.95rem; border:1px solid var(--accent);
+      text-decoration:none; cursor:pointer; font-family:inherit;
+      transition:background 180ms var(--ease-out), transform 180ms var(--ease-out);
+    }
+    .btn-secondary:hover { background:var(--accent-dim); transform:translateY(-3px); }
+    .btn-secondary:active { transform:scale(0.97); }
+    .hero-image {
+      margin-top:3.5rem; animation:fadeIn 0.8s ease 0.4s forwards; opacity:0;
+      border-radius:20px; overflow:hidden;
+      box-shadow:0 30px 80px rgba(0,0,0,0.5), 0 0 60px var(--accent-dim);
+    }
+    .hero-image img { width:100%; max-width:800px; border-radius:20px; display:block; margin:0 auto; }
+    .stats-bar {
+      display:flex; justify-content:center; gap:3rem; flex-wrap:wrap;
+      margin-top:3rem; padding:2rem;
+      background:var(--glass-bg); border-radius:16px; border:1px solid var(--border-subtle);
+      backdrop-filter:blur(12px); animation:fadeIn 0.8s ease 0.5s forwards; opacity:0;
+    }
+    .stat-item { text-align:center; }
+    .stat-number { font-size:2rem; font-weight:800; color:var(--accent); }
+    .stat-label { font-size:0.8rem; color:var(--text-muted); margin-top:0.25rem; }
+
+    /* SECTIONS */
+    section { padding:5rem 2rem; position:relative; z-index:10; }
+    .section-header { text-align:center; margin-bottom:3.5rem; }
+    .section-header h2 { font-size:clamp(1.8rem,3.5vw,2.5rem); font-weight:800; margin-bottom:0.75rem; }
+    .section-header p { color:var(--text-secondary); font-size:1.05rem; max-width:550px; margin:0 auto; }
+
+    /* ABOUT */
+    .showcase { max-width:1050px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:3.5rem; align-items:center; }
+    .showcase-img img { width:100%; border-radius:20px; box-shadow:0 20px 60px rgba(0,0,0,0.4); }
+    .showcase-text h2 { font-size:2rem; font-weight:800; margin-bottom:1rem; line-height:1.3; }
+    .showcase-text p { color:var(--text-secondary); font-size:1rem; line-height:1.75; margin-bottom:1.5rem; }
+    .showcase-list { list-style:none; margin-bottom:2rem; }
+    .showcase-list li { display:flex; align-items:center; gap:0.75rem; color:var(--text-secondary); font-size:0.95rem; padding:0.5rem 0; }
+    .check { width:24px; height:24px; border-radius:50%; background:var(--accent-dim); color:var(--accent); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:0.8rem; }
+
+    /* SERVICES */
+    .services-section { max-width:900px; margin:0 auto; }
+    .services-chips-display {
+      display:flex; flex-wrap:wrap; gap:0.75rem; justify-content:center;
+      margin-top:1rem;
+    }
+    .service-tag {
+      display:inline-flex; align-items:center; gap:0.4rem;
+      padding:0.65rem 1.4rem; border-radius:100px;
+      background:var(--accent-dim); color:var(--accent);
+      font-weight:600; font-size:0.92rem;
+      border:1px solid var(--border-subtle);
+      transition:border-color 180ms var(--ease-out), box-shadow 180ms var(--ease-out);
+    }
+    .service-tag:hover { border-color:var(--accent); box-shadow:0 0 16px var(--accent-dim); }
+
+    /* FEATURE CARDS — varied sizes, not identical grid */
+    .features-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.5rem; max-width:1050px; margin:0 auto; }
+    .feature-card {
+      background:var(--glass-bg); border-radius:16px; padding:2rem;
+      border:1px solid var(--border-subtle); backdrop-filter:blur(12px);
+      transition:transform 220ms var(--ease-out), border-color 220ms var(--ease-out), box-shadow 220ms var(--ease-out);
+    }
+    .feature-card:hover { transform:translateY(-6px); border-color:var(--accent); box-shadow:0 20px 50px rgba(0,0,0,0.3),0 0 30px var(--accent-dim); }
+    .feature-icon { width:52px; height:52px; border-radius:12px; background:var(--accent-dim); display:flex; align-items:center; justify-content:center; margin-bottom:1.2rem; font-size:1.5rem; }
+    .feature-card h3 { font-size:1.1rem; font-weight:700; margin-bottom:0.5rem; }
+    .feature-card p { color:var(--text-secondary); font-size:0.9rem; line-height:1.6; }
+
+    /* GALLERY */
+    .portfolio-grid { display:flex; gap:1.5rem; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:2rem; max-width:1100px; margin:0 auto; -ms-overflow-style:none; scrollbar-width:none; }
+    .portfolio-grid::-webkit-scrollbar { display:none; }
+    .portfolio-item { flex:0 0 380px; scroll-snap-align:center; position:relative; border-radius:16px; overflow:hidden; border:1px solid var(--border-subtle); aspect-ratio:4/3; cursor:pointer; }
+    .portfolio-item img { width:100%; height:100%; object-fit:cover; transition:transform 600ms var(--ease-out); }
+    .portfolio-item:hover img { transform:scale(1.05); }
+    .portfolio-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,0.9),transparent 60%); display:flex; align-items:flex-end; padding:1.5rem; opacity:0; transition:opacity 280ms var(--ease-out); }
+    .portfolio-item:hover .portfolio-overlay { opacity:1; }
+    .portfolio-overlay span { color:#fff; font-weight:700; font-size:1.1rem; }
+
+    /* CONTACT */
+    .contact-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.5rem; max-width:900px; margin:0 auto; }
+    .contact-card {
+      background:var(--glass-bg); border:1px solid var(--border-subtle); border-radius:16px;
+      padding:2rem; text-align:center; backdrop-filter:blur(12px);
+      transition:border-color 220ms var(--ease-out), transform 220ms var(--ease-out);
+    }
+    .contact-card:hover { border-color:var(--accent); transform:translateY(-4px); }
+    .contact-card .icon { font-size:2rem; margin-bottom:0.8rem; }
+    .contact-card h3 { font-size:1rem; font-weight:700; margin-bottom:0.4rem; }
+    .contact-card p, .contact-card a { color:var(--text-secondary); font-size:0.95rem; text-decoration:none; line-height:1.6; }
+    .contact-card a:hover { color:var(--accent); }
+
+    /* CTA + FOOTER */
+    .cta-section { text-align:center; padding:5rem 2rem; z-index:10; position:relative; }
+    .cta-section h2 { font-size:clamp(1.8rem,3.5vw,2.5rem); font-weight:800; margin-bottom:1rem; }
+    .cta-section p { color:var(--text-secondary); font-size:1.05rem; max-width:500px; margin:0 auto 2rem; }
+    .footer { padding:2rem; text-align:center; color:var(--text-muted); font-size:0.85rem; border-top:1px solid var(--border-subtle); position:relative; z-index:10; }
+    .footer span { color:var(--accent); }
+    .social-links { display:flex; justify-content:center; gap:1rem; margin-bottom:1rem; }
+    .social-link {
+      display:flex; align-items:center; justify-content:center; width:42px; height:42px;
+      border-radius:50%; border:1px solid var(--border-subtle); color:var(--text-secondary);
+      text-decoration:none;
+      transition:border-color 200ms var(--ease-out), color 200ms var(--ease-out), transform 200ms var(--ease-out);
+    }
+    .social-link:hover { border-color:var(--accent); color:var(--accent); transform:translateY(-3px); }
+    .social-link-facebook:hover { color:#1877f2; border-color:#1877f2; }
+    .social-link-instagram:hover { color:#e1306c; border-color:#e1306c; }
+    .social-link-tiktok:hover { color:#fff; border-color:#fff; }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+    .fade-in { opacity:0; transform:translateY(20px); transition:opacity 600ms var(--ease-out), transform 600ms var(--ease-out); }
+    .fade-in.visible { opacity:1; transform:translateY(0); }
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+      .navbar{flex-direction:row-reverse;}
+      .nav-links{display:none;}
+      .mobile-menu-btn{display:block;}
+      .nav-cta{display:none;}
+      .showcase{grid-template-columns:1fr;gap:2rem;}
+      .stats-bar{gap:1.5rem;}
+      .floating-icon:nth-child(3),.floating-icon:nth-child(5){display:none;}
+    }
+    /* MOBILE OVERLAY */
+    .mobile-overlay {
+      display:none; position:fixed; inset:0; z-index:200;
+      background:rgba(0,0,0,0.85); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px);
+      align-items:center; justify-content:center; flex-direction:column;
+      opacity:0; transition:opacity 250ms var(--ease-out);
+    }
+    .mobile-overlay.active { display:flex; opacity:1; }
+    .mobile-close-btn {
+      position:absolute; top:1.5rem; left:1.5rem;
+      background:rgba(255,255,255,0.08); border:1px solid var(--border-subtle);
+      color:#fff; font-size:1.4rem; width:44px; height:44px; border-radius:50%;
+      cursor:pointer; display:flex; align-items:center; justify-content:center;
+      transition:background 200ms var(--ease-out);
+    }
+    .mobile-close-btn:hover { background:rgba(255,255,255,0.16); }
+    .mobile-nav-links {
+      display:flex; flex-direction:column; align-items:center; gap:2rem; text-align:center;
+    }
+    .mobile-nav-links a {
+      font-size:1.6rem; font-weight:700; color:rgba(255,255,255,0.85);
+      text-decoration:none; transition:color 180ms var(--ease-out), transform 180ms var(--ease-out);
+    }
+    .mobile-nav-links a:hover { color:var(--accent); transform:scale(1.05); }
+    .mobile-nav-links .btn-primary { font-size:1rem; margin-top:0.5rem; }
+  </style>
+</head>
+<body>
+  <canvas id="network-canvas"></canvas>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div class="mobile-overlay" id="mobile-overlay">
+    <button class="mobile-close-btn" id="mobile-close" aria-label="סגור">✕</button>
+    <nav class="mobile-nav-links">
+      <a href="#about">אודות</a>
+      <a href="#services">שירותים</a>
+      <a href="#gallery">גלריה</a>
+      <a href="#contact">צור קשר</a>
+      <a href="https://diana.co.il/%d7%a6%d7%a8%d7%95-%d7%a7%d7%a9%d7%a8/" class="btn-primary" target="_blank" rel="noopener">קבע תור ←</a>
+    </nav>
+  </div>
+
+  <div class="floating-icons">
+    <div class="floating-icon">✂</div>
+    <div class="floating-icon">💈</div>
+    <div class="floating-icon">🪒</div>
+    <div class="floating-icon">💇</div>
+    <div class="floating-icon">⭐</div>
+    <div class="floating-icon">🌿</div>
+  </div>
+
+  <nav class="navbar">
+    <div class="nav-logo"><img src="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/logos/1778301370599-diana_logo-new-02-1.png" alt="על הסכין" /><span>על הסכין</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">אודות</a></li>
+      <li><a href="#services">שירותים</a></li>
+      <li><a href="#gallery">גלריה</a></li>
+      <li><a href="#contact">צור קשר</a></li>
+    </ul>
+    <a href="https://diana.co.il/%d7%a6%d7%a8%d7%95-%d7%a7%d7%a9%d7%a8/" class="nav-cta" target="_blank" rel="noopener">קבע תור</a>
+    <button class="mobile-menu-btn" aria-label="תפריט">☰</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="hero-badge">✂ מספרה בוטיק - עיצוב שיער מקצועי</span>
+      <h1>תספורת שמדברת<br><span class="accent-text">בעד עצמה</span></h1>
+      <p class="hero-subtitle">שירותים: תספורת גברים, גילוח מסורתי, תספורת ילדים, עיצוב שיער, צביעת שיער, טיפולי קרקפת, תספורת נשים, תספורת כלות. מספרה בוטיק, דיאנה תדאג לכל מה שאת צריכה ותצאי מאושרת ומחויכת, אנו מתמחים בשיער דליל</p>
+      <div class="hero-buttons">
+        <a href="https://diana.co.il/%d7%a6%d7%a8%d7%95-%d7%a7%d7%a9%d7%a8/" class="btn-primary" target="_blank" rel="noopener">קבע תור עכשיו ←</a>
+        <a href="#services" class="btn-secondary">השירותים שלנו</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/images/1778301370600-44a55415-94e0-41f0-b127-722c1321a391.jpg" alt="על הסכין" loading="eager" />
+      </div>
+      <div class="stats-bar">
+        <div class="stat-item"><div class="stat-number">8+</div><div class="stat-label">שנות ניסיון</div></div>
+        <div class="stat-item"><div class="stat-number">8</div><div class="stat-label">שירותים מקצועיים</div></div>
+        <div class="stat-item"><div class="stat-number">500+</div><div class="stat-label">לקוחות מרוצים</div></div>
+        <div class="stat-item"><div class="stat-number">100%</div><div class="stat-label">מחויבות לאיכות</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="showcase fade-in">
+      <div class="showcase-img">
+        <img src="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/images/1778301371253-173d5b42-67a7-4b92-ac82-4d25b2660812.jpg" alt="על הסכין" loading="lazy" />
+      </div>
+      <div class="showcase-text">
+        <h2>מספרה בוטיק<br><span class="accent-text">על הסכין</span></h2>
+        <p>שירותים: תספורת גברים, גילוח מסורתי, תספורת ילדים, עיצוב שיער, צביעת שיער, טיפולי קרקפת, תספורת נשים, תספורת כלות. מספרה בוטיק, דיאנה תדאג לכל מה שאת צריכה ותצאי מאושרת ומחויכת, אנו מתמחים בשיער דליל</p>
+        <ul class="showcase-list">
+          <li><span class="check">✓</span> מומחים בתספורת גברים, נשים וילדים</li>
+          <li><span class="check">✓</span> מתמחים בשיער דליל וטיפולי קרקפת</li>
+          <li><span class="check">✓</span> גילוח מסורתי ועיצוב זקן מקצועי</li>
+          <li><span class="check">✓</span> צביעת שיער וטיפולים מתקדמים</li>
+          <li><span class="check">✓</span> תספורת כלות ועיצובים מיוחדים לאירועים</li>
+        </ul>
+        <a href="https://diana.co.il/%d7%a6%d7%a8%d7%95-%d7%a7%d7%a9%d7%a8/" class="btn-primary" target="_blank" rel="noopener">קבע תור ←</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="section-header fade-in">
+      <h2>השירותים <span class="accent-text">שלנו</span></h2>
+      <p>הכל תחת קורת גג אחת — מתספורת קלאסית ועד עיצובים מורכבים</p>
+    </div>
+    <div class="services-section fade-in">
+      <div class="services-chips-display">
+      <span class="service-tag">✂ תספורת גברים</span>
+      <span class="service-tag">✂ גילוח מסורתי</span>
+      <span class="service-tag">✂ תספורת ילדים</span>
+      <span class="service-tag">✂ עיצוב שיער</span>
+      <span class="service-tag">✂ צביעת שיער</span>
+      <span class="service-tag">✂ טיפולי קרקפת</span>
+      <span class="service-tag">✂ תספורת נשים</span>
+      <span class="service-tag">✂ תספורת כלות</span>
+    </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section>
+    <div class="section-header fade-in">
+      <h2>למה לבחור <span class="accent-text">על הסכין</span>?</h2>
+      <p>מקצועיות, אווירה ותוצאות שמדברות בעד עצמן</p>
+    </div>
+    <div class="features-list">
+      <div class="feature-card fade-in">
+        <div class="feature-icon">✂</div>
+        <h3>ספרים מקצועיים</h3>
+        <p>שנים של ניסיון ועדכניות טרנדים — כל תספורת היא יצירת אומנות.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">📅</div>
+        <h3>הזמנת תור בקלות</h3>
+        <p>תיאום תור אונליין בלי המתנה — בחרו שעה שנוחה לכם.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">💈</div>
+        <h3>אווירה ייחודית</h3>
+        <p>מספרה עם אופי — מקום שתרגישו בו בבית מהרגע הראשון.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">⭐</div>
+        <h3>לקוחות מרוצים</h3>
+        <p>חוזרים שוב ושוב — כי אצלנו, כל ביקור הוא חוויה.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="section-header fade-in">
+      <h2>גלריית <span class="accent-text">עיצובים</span></h2>
+      <p>הצצה לעבודות של על הסכין</p>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/images/1778301370600-44a55415-94e0-41f0-b127-722c1321a391.jpg" alt="אווירת המספרה" loading="lazy" />
+        <div class="portfolio-overlay"><span>אווירת המספרה</span></div>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/images/1778301371253-173d5b42-67a7-4b92-ac82-4d25b2660812.jpg" alt="עיצוב שיער" loading="lazy" />
+        <div class="portfolio-overlay"><span>עיצוב שיער</span></div>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/images/1778301371801-best-hair-salon-near-dl-lowry-west-86th-street-and-deweese-hair-design-in-indianapolis-g-michael-salon.jpg" alt="ספרים מקצועיים" loading="lazy" />
+        <div class="portfolio-overlay"><span>ספרים מקצועיים</span></div>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/images/1778301373131-c100845b-e6bf-4f9f-b5ad-1a5999340339.jpg" alt="תוצאות מרהיבות" loading="lazy" />
+        <div class="portfolio-overlay"><span>תוצאות מרהיבות</span></div>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://opejdkmykxlefswguado.supabase.co/storage/v1/object/public/images/1778301374534-diana-155.jpg" alt="חוויה ייחודית" loading="lazy" />
+        <div class="portfolio-overlay"><span>חוויה ייחודית</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-header fade-in">
+      <h2>בואו <span class="accent-text">לבקר</span></h2>
+      <p>קבעו תור עוד היום — נשמח לראות אתכם</p>
+    </div>
+    <div class="contact-grid fade-in">
+      <div class="contact-card"><div class="icon">📞</div><h3>טלפון</h3><p><a href="tel:0542345222">0542345222</a></p></div>
+      <div class="contact-card"><div class="icon">🕐</div><h3>שעות פעילות</h3><p style="color:var(--accent);font-weight:700;font-size:1rem;">24/7 - פתוחים תמיד ✨</p></div>
+      <div class="contact-card">
+        <div class="icon">📍</div><h3>כתובת</h3><p>דרך מנחם בגין, רחובות</p>
+        <p style="margin-top:0.8rem;display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;">
+          <a href="https://www.google.com/maps/search/?api=1&query=%D7%93%D7%A8%D7%9A%20%D7%9E%D7%A0%D7%97%D7%9D%20%D7%91%D7%92%D7%99%D7%9F%2C%20%D7%A8%D7%97%D7%95%D7%91%D7%95%D7%AA" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.3rem;padding:0.4rem 0.9rem;border:1px solid var(--border-subtle);border-radius:20px;font-size:0.82rem;color:var(--accent);text-decoration:none;">🗺️ Google Maps</a>
+          <a href="https://waze.com/ul?q=%D7%93%D7%A8%D7%9A%20%D7%9E%D7%A0%D7%97%D7%9D%20%D7%91%D7%92%D7%99%D7%9F%2C%20%D7%A8%D7%97%D7%95%D7%91%D7%95%D7%AA" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.3rem;padding:0.4rem 0.9rem;border:1px solid var(--border-subtle);border-radius:20px;font-size:0.82rem;color:var(--accent);text-decoration:none;">🚗 Waze</a>
+        </p>
+      </div>
+      <div class="contact-card"><div class="icon">🗓️</div><h3>הזמנת תור</h3><p><a href="https://diana.co.il/%d7%a6%d7%a8%d7%95-%d7%a7%d7%a9%d7%a8/" target="_blank">להזמנה אונליין ←</a></p></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section fade-in">
+    <h2>מוכנים לתספורת <span class="accent-text">שתשנה הכל</span>?</h2>
+    <p>קבעו תור עכשיו ותגיעו לעל הסכין — כי אתם מגיעים לטוב ביותר.</p>
+    <a href="https://diana.co.il/%d7%a6%d7%a8%d7%95-%d7%a7%d7%a9%d7%a8/" class="btn-primary" target="_blank" rel="noopener" style="font-size:1.05rem;padding:1rem 2.8rem;">קבעו תור עכשיו ←</a>
+  </section>
+
+  <footer class="footer">
+    <div class="social-links">
+      <a href="https://diana.co.il/%d7%9e%d7%9e%d7%9c%d7%99%d7%a6%d7%99%d7%9d/" target="_blank" rel="noopener" class="social-link social-link-facebook" aria-label="פייסבוק"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      <a href="https://diana.co.il/%d7%9e%d7%9e%d7%9c%d7%99%d7%a6%d7%99%d7%9d/" target="_blank" rel="noopener" class="social-link social-link-instagram" aria-label="אינסטגרם"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://diana.co.il/%d7%9e%d7%9e%d7%9c%d7%99%d7%a6%d7%99%d7%9d/" target="_blank" rel="noopener" class="social-link social-link-tiktok" aria-label="טיקטוק"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.5a8.17 8.17 0 0 0 4.78 1.52V6.56a4.85 4.85 0 0 1-1.01.13z"/></svg></a>
+    </div>
+    <p>© 2026 <span>על הסכין</span> — כל הזכויות שמורות | בנייה: <a href="https://barber-sites.vercel.app" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">קאטסייט</a></p>
+  </footer>
+
+  <script>
+    // Network canvas — color: 126,103,22
+    (function(){
+      const canvas=document.getElementById('network-canvas');
+      if(!canvas)return;
+      const ctx=canvas.getContext('2d');
+      let W,H,P=[];
+      let mouse={x:null,y:null};
+      const N=55,DIST=140,MR=200,CR='126,103,22';
+      function resize(){W=canvas.width=innerWidth;H=canvas.height=innerHeight;}
+      function init(){P=[];for(let i=0;i<N;i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,r:Math.random()*1.5+.5});}
+      function draw(){
+        ctx.clearRect(0,0,W,H);
+        P.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;});
+        for(let i=0;i<P.length;i++)for(let j=i+1;j<P.length;j++){
+          const dx=P[i].x-P[j].x,dy=P[i].y-P[j].y,d=Math.sqrt(dx*dx+dy*dy);
+          if(d<DIST){ctx.strokeStyle=`rgba(${CR},${(1-d/DIST)*.1})`;ctx.lineWidth=.5;ctx.beginPath();ctx.moveTo(P[i].x,P[i].y);ctx.lineTo(P[j].x,P[j].y);ctx.stroke();}
+        }
+        P.forEach(p=>{
+          let g=.2;
+          if(mouse.x!==null){const dx=p.x-mouse.x,dy=p.y-mouse.y,d=Math.sqrt(dx*dx+dy*dy);if(d<MR)g=.2+(1-d/MR)*.6;}
+          ctx.fillStyle=`rgba(${CR},${g})`;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();
+        });
+        requestAnimationFrame(draw);
+      }
+      window.addEventListener('mousemove',e=>{mouse.x=e.clientX;mouse.y=e.clientY;});
+      window.addEventListener('mouseleave',()=>{mouse.x=null;mouse.y=null;});
+      window.addEventListener('resize',()=>{resize();init();});
+      resize();init();draw();
+    })();
+
+    // Scroll reveal
+    const obs=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
+    },{threshold:0.12});
+    document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        e.preventDefault();
+        const t=document.querySelector(a.getAttribute('href'));
+        if(t)t.scrollIntoView({behavior:'smooth'});
+      });
+    });
+
+    // Mobile overlay menu
+    const mobileBtn=document.querySelector('.mobile-menu-btn');
+    const overlay=document.getElementById('mobile-overlay');
+    const closeBtn=document.getElementById('mobile-close');
+    function openMenu(){overlay.classList.add('active');document.body.style.overflow='hidden';}
+    function closeMenu(){overlay.classList.remove('active');document.body.style.overflow='';}
+    mobileBtn?.addEventListener('click',openMenu);
+    closeBtn?.addEventListener('click',closeMenu);
+    overlay?.addEventListener('click',e=>{if(e.target===overlay)closeMenu();});
+    overlay?.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+  </script>
+</body>
+</html>

@@ -79,7 +79,7 @@ nav ul a:hover{color:var(--text)}
 .hero-tag .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse 2s ease infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
 .hero h1{font-family:"Frank Ruhl Libre",serif;font-weight:900;
-  font-size:clamp(64px,10vw,148px);line-height:.9;letter-spacing:-.03em;margin-bottom:28px;padding-inline-start:8px}
+  font-size:clamp(64px,10vw,148px);line-height:.9;letter-spacing:-.03em;margin-bottom:28px}
 .rl{overflow:hidden;display:block}
 .rli{display:block;transform:translateY(105%);animation:lineUp .9s var(--ease) forwards}
 .rl:nth-child(1) .rli{animation-delay:.25s}
@@ -118,7 +118,7 @@ nav ul a:hover{color:var(--text)}
 /* SECTIONS */
 .section{padding:120px 0}
 .section-label{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--gold);margin-bottom:16px;display:block}
+  color:rgba(240,236,227,.75);margin-bottom:16px;display:block}
 .section-h2{font-family:"Frank Ruhl Libre",serif;font-weight:500;font-size:clamp(40px,5vw,72px);
   line-height:1.05;letter-spacing:-.02em;margin-bottom:16px}
 .section-h2 .ital{font-style:italic;font-weight:300;color:var(--blue)}
@@ -282,11 +282,15 @@ footer ul a:hover{color:var(--gold)}
   .gallery-scroll{padding-inline:24px}
 }
 @media(max-width:640px){
-  .hero h1{font-size:clamp(52px,15vw,84px)}
+  .hero h1{font-size:clamp(48px,13vw,76px);overflow:hidden}
   .bento{grid-template-columns:1fr}
   .bento-card.wide,.bento-card.featured{grid-column:span 1}
   .foot-grid{grid-template-columns:1fr}
   .hero-stats{display:none}
+}
+@media(max-width:420px){
+  .hero h1{font-size:clamp(40px,11vw,60px)}
+  .hero-content{padding-inline:16px}
 }
 </style>
 </head>
@@ -461,26 +465,17 @@ footer ul a:hover{color:var(--gold)}
       <div class="r-card sr">
   <div class="r-stars">★★★★★</div>
   <div class="r-quote">דיאנה פשוט מדהימה. אחרי שנים של סבל עם שיער דליל, היא הסבירה לי בדיוק מה הבעיה ונתנה לי פתרון שעובד. אף אחד לא עשה את זה לפניה.</div>
-  <div class="r-who">
-    <div class="r-av">מ</div>
-    <div><div class="r-name">מיכל כהן</div><div class="r-date">לפני שבועיים · GOOGLE</div></div>
-  </div>
+  <div class="r-who"><div class="r-av">מ</div><div><div class="r-name">מיכל כהן</div><div class="r-date">לפני שבועיים · GOOGLE</div></div></div>
 </div>
 <div class="r-card sr sr-delay-1">
   <div class="r-stars">★★★★★</div>
   <div class="r-quote">הכינה לי את השיער לחתונה ויצאתי בדיוק כמו שרציתי. היתה סבלנית, מקשיבה, ולא הלחיצה אותי. ממליצה לכל כלה.</div>
-  <div class="r-who">
-    <div class="r-av">ת</div>
-    <div><div class="r-name">תמר ברק</div><div class="r-date">לפני חודש · GOOGLE</div></div>
-  </div>
+  <div class="r-who"><div class="r-av">ת</div><div><div class="r-name">תמר ברק</div><div class="r-date">לפני חודש · GOOGLE</div></div></div>
 </div>
 <div class="r-card sr sr-delay-2">
   <div class="r-stars">★★★★★</div>
   <div class="r-quote">הגעתי לראשונה לפני שנה ומאז לא הלכתי לשום מקום אחר. תמיד יוצאת מרוצה, תמיד מרגישה שדיאנה מכירה את השיער שלי.</div>
-  <div class="r-who">
-    <div class="r-av">נ</div>
-    <div><div class="r-name">נועה לוי</div><div class="r-date">לפני 3 שבועות · GOOGLE</div></div>
-  </div>
+  <div class="r-who"><div class="r-av">נ</div><div><div class="r-name">נועה לוי</div><div class="r-date">לפני 3 שבועות · GOOGLE</div></div></div>
 </div>
     </div>
   </div>
